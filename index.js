@@ -3,8 +3,8 @@ let participantes = [
   {
   nome: "Ester Pereira",
   email:"esterpereira@gmail.com",
-  dataInscriçao: new Date(2024,3,05,08,00),
-  dataCheckIn: new Date(2024, 3,07,08,00)
+  dataInscriçao: new Date(2024,3,5,8,0),
+  dataCheckIn: new Date(2024, 3,7,8,0)
   },
     {
       nome: "Diego Fernandes",
@@ -98,8 +98,7 @@ const criandoNovoParticipante = (participante) => {
 }
 
 const atualizarLista = (participantes) => {
-  //pegando informaçoes do HTML
-
+  
   //estrutura de repetiçao 
   let output= ""
     for(let participante of participantes){
@@ -108,7 +107,7 @@ const atualizarLista = (participantes) => {
   
 
 
-  //Substituindo uma infornaçao do HTML
+  //Substituindo uma informacao do HTML
   document.querySelector('tbody').innerHTML = output
   }
 
@@ -146,7 +145,8 @@ const atualizarLista = (participantes) => {
  }
 
  const fazerCheckIn = (event) =>{
-  // oque precisa pra fazer check-in
+  // oque precisa pra fazer check-in?
+
   //Saber se realmente quer fazer o checkin
   const resultado = confirm ("Você tem certeza que deseja fazer o Check-In?")
   if(resultado == false){
@@ -160,6 +160,7 @@ const atualizarLista = (participantes) => {
  
   //segundo atualizar o check in do participante
   participante.dataCheckIn = new Date
+
   // terceiro atualizar a lista 
   atualizarLista(participantes)
 
